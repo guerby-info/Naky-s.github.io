@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Naky's Music Group</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- SDK Facebook -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <!-- OAuth for Twitter -->
+    <script src="https://cdn.rawgit.com/oauth-io/oauth-js/c5af4519/dist/oauth.js"></script>
+    <!-- Google Platform API -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Naky's Music Group</title>
+    <link rel="stylesheet" href="style.css"> <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Se connecter</a></li>
+            <li><a href="signup.html">Inscrivez-vous</a></li>
+        </ul>
+        <!-- Barre de recherche -->
+        <div class="search-bar">
+            <input type="text" placeholder="Rechercher...">
+            <button type="submit">🔍</button>
+        </div>
+    </nav>
+</head>
+<body>
+   
+    <header>
+        <h1>Connexion à Naky's Music Group</h1>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+        <section class="login-form">
+            <h2>Connectez-vous à votre compte</h2>
+            <form action="login-process.php" method="POST">
+                <div class="input-group">
+                    <label for="email">Adresse e-mail :</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <button type="submit" class="btn">Se connecter</button>
+            </form>
+
+            <div class="social-login">
+                <p>Ou connectez-vous via :</p>
+
+                <!-- Bouton Google -->
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+                <!-- Bouton Facebook -->
+                <button id="facebook-login" class="btn" onclick="checkFacebookLoginState();"> <a href="#"><img src="facebook-icon.png" alt="Facebook" width="30"></a></button>
+
+                <!-- Bouton Twitter -->
+                <button id="google" class="btn" onclick="googlrLogin();"><a href="#"><img src="google.png" alt="Google" width="30"></a></button>
+            </div>
+
+            <p>Vous n'avez pas de compte ? <a href="signup.html">Inscrivez-vous ici</a></p>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>À propos</h3>
+                <p>Naky's Music Group est un collectif dédié à la création musicale innovante.</p>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:contact@nakysmusicgroup.com">contact@nakysmusicgroup.com</a></p>
+                <p>Téléphone: <a href="tel:+50943708949">+509 43 70 89 49</a></p>
+            </div>
+            <div class="footer-section social">
+                <h3>Suivez-nous</h3>
+                <a href="#"><img src="facebook-icon.png" alt="Facebook" width="30"></a>
+                <a href="#"><img src="tiktok-icon.png" alt="Tiktok" width="30"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram" width="30"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Naky's Music Group. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Script pour Google Sign-In -->
+    <script>
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId());
+            console.log('Name: ' + profile.getName());
+            console.log('Email: ' + profile.getEmail());
+        }
+    </script>
+
+    <!-- Script pour Facebook Login -->
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : 'votre-app-id', // Remplacez par votre App ID Facebook
+                cookie     : true,
+                xfbml      : true,
+                version    : 'v8.0'
+            });
+            
+            FB.AppEvents.logPageView();   
+        };
+
+        function checkFacebookLoginState() {
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
+        }
+
+        function statusChangeCallback(response) {
+            if (response.status === 'connected') {
+                console.log('Utilisateur connecté via Facebook');
+            } else {
+                console.log('Utilisateur non connecté');
+            }
+        }
+    </script>
+
+    <!-- Script pour Twitter Login -->
+    <script>
+        OAuth.initialize('votre-clé-api'); // Remplacez par votre clé API Twitter
+        function twitterLogin() {
+            OAuth.popup('twitter').then(twitter => {
+                console.log(twitter);
+            });
+        }
+    </script>
+</body>
+</html>

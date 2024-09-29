@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Naky's Music Group</title>
+    <link rel="stylesheet" href="style.css"> <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Se connecter</a></li>
+            <li><a href="signup.html">Inscrivez-vous</a></li>
+        </ul>
+        <!-- Barre de recherche -->
+        <div class="search-bar">
+            <input type="text" placeholder="Rechercher...">
+            <button type="submit">🔍</button>
+        </div>
+        
+    </nav>
+
+</head>
+
+<body onload="checkUser()">
+    <!-- En-tête identique à celui des autres pages -->
+    <header>
+        <h1>Bienvenue sur Naky's Music Group</h1>
+        <!-- Barre de navigation -->
+       
+    </header>
+
+    <main>
+        <!-- Formulaire d'inscription -->
+        <section class="signup-form">
+            <h2>Inscrivez-vous et faites partie de notre univers musical</h2>
+            <p>En vous inscrivant à Naky's Music Group, vous rejoignez une communauté d'artistes passionnés, de producteurs talentueux, et de mélomanes du monde entier. Créez, collaborez, et laissez-vous inspirer !</p>
+            <p>Profitez des avantages suivants :</p>
+            <ul>
+                <li>Accès exclusif à notre plateforme de production musicale.</li>
+                <li>Participez à des événements et performances réservés à nos membres.</li>
+                <li>Collaborez avec d'autres artistes pour créer des morceaux uniques.</li>
+                <li>Rejoignez un réseau professionnel pour faire évoluer votre carrière musicale.</li>
+            </ul>
+
+            <form action="signup-process.php" method="POST">
+                <div class="input-group">
+                    <label for="username">Nom d'utilisateur :</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Adresse e-mail :</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <button type="submit" class="btn">S'inscrire</button>
+            </form>
+
+            <div class="signup-tips">
+                <h3>Besoin d'aide pour vous inscrire ?</h3>
+                <p>Suivez ces conseils :</p>
+                <ul>
+                    <li>Choisissez un nom d'utilisateur unique qui vous représente.</li>
+                    <li>Utilisez une adresse e-mail valide pour recevoir les mises à jour et les notifications.</li>
+                    <li>Créez un mot de passe sécurisé. Utilisez des lettres, des chiffres et des symboles pour plus de sécurité.</li>
+                </ul>
+                <p>Déjà inscrit ? <a href="login.html">Connectez-vous ici</a></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>À propos</h3>
+                <p>Naky's Music Group est un collectif dédié à la création musicale innovante. Basé sur la passion, nous cherchons à transformer chaque instant d'écoute en une expérience unique.</p>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:contact@nakysmusicgroup.com">contact@nakysmusicgroup.com</a></p>
+                <p>Téléphone: <a href="tel:+50943708949">+509 43 70 89 49</a></p>
+                <p>Adresse: 12 Rue Lamarre, Mirebalais, Haiti</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Suivez-nous</h3>
+                <a href="#"><img src="facebook-icon.png" alt="Facebook" width="30"></a>
+                <a href="#"><img src="tiktok-icon.png" alt="Tiktok" width="30"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram" width="30"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Naky's Music Group. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

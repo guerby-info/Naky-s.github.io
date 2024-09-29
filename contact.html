@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Naky's Music Group</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function checkUser() {
+            if (!localStorage.getItem("user")) {
+                window.location.href = "login.html";
+            }
+        }
+    </script>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Inscription - Naky's Music Group</title>
+     <link rel="stylesheet" href="style.css"> <nav>
+         <ul>
+             <li><a href="index.html">Accueil</a></li>
+             <li><a href="about.html">À propos</a></li>
+             <li><a href="service.html">Services</a></li>
+             <li><a href="contact.html">Contact</a></li>
+             <li><a href="login.html">Se connecter</a></li>
+             <li><a href="signup.html">Inscrivez-vous</a></li>
+         </ul>
+         <!-- Barre de recherche -->
+         <div class="search-bar">
+             <input type="text" placeholder="Rechercher...">
+             <button type="submit">🔍</button>
+         </div>
+     </nav>
+</head>
+<body onload="checkUser()">
+    <!-- Barre de navigation -->
+   
+    <!-- En-tête -->
+    <header>
+    
+        <h1>Contactez Naky's Music Group</h1>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+        <section>
+            <h2>Nous Contacter</h2>
+            <p>Nous sommes là pour répondre à vos questions, suggestions ou préoccupations. N'hésitez pas à nous contacter par l'un des moyens suivants :</p>
+            
+            <div class="contact-details">
+                <h3>Par Email</h3>
+                <p>Envoyez-nous un email à : <a href="mailto:xtapanaky@gmail.com">xtapanaky@gmail.com</a></p>
+                
+                <h3>Par Téléphone</h3>
+                <p>Appelez-nous au : <a href="tel:+50943708949">+509 43 70 89 49</a></p>
+
+                <h3>Adresse</h3>
+                <p>12 Rue Lamarre, Mirebalais, Haiti</p>
+            </div>
+
+            <h3>Formulaire de Contact</h3>
+            <form action="send_message.php" method="post">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+   <!-- Pied de page -->
+   <footer>
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h3>À propos</h3>
+            <p>Naky's Music Group est un collectif dédié à la création musicale innovante. Basé sur la passion, nous cherchons à transformer chaque instant d'écoute en une expérience unique.</p>
+        </div>
+        <div class="footer-section contact">
+            <h3>Contact</h3>
+            <p>Email: <a href="mailto:contact@nakysmusicgroup.com">contact@nakysmusicgroup.com</a></p>
+            <p>Téléphone: <a href="tel:+50943708949">+509 43 70 89 49</a></p>
+            <p>Adresse: 12 Rue Lamarre, Mirebalais, Haiti</p>
+        </div>
+        <div class="footer-section social">
+            <h3>Suivez-nous</h3>
+            <a href="#"><img src="facebook-icon.png" alt="Facebook" width="30"></a>
+            <a href="#"><img src="tiktok-icon.png" alt="Tiktok" width="30"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram" width="30"></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Naky's Music Group. Tous droits réservés.</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Naky's Music Group</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function checkUser() {
+            if (!localStorage.getItem("user")) {
+                window.location.href = "login.html";
+            }
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Naky's Music Group</title>
+    <link rel="stylesheet" href="style.css"> <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Se connecter</a></li>
+            <li><a href="signup.html">Inscrivez-vous</a></li>
+        </ul>
+        <!-- Barre de recherche -->
+        <div class="search-bar">
+            <input type="text" placeholder="Rechercher...">
+            <button type="submit">🔍</button>
+        </div>
+    </nav>
+</head>
+<body onload="checkUser()">
+
+    <main>
+        <section class="services">
+            <h2>Découvrez nos services</h2>
+            <p>Naky's Music Group, propose une gamme de services conçus pour répondre aux besoins des fans et des passionnés de musique. Découvrez comment nous pouvons vous aider à réaliser vos rêves musicaux :</p>
+
+            <div class="service-container">
+                <div class="service-item">
+                    <h3>Production Musicale</h3>
+                    <p>Nos experts en production musicale sont prêts à donner vie à vos créations. Nous offrons des services de composition, d'arrangement, d'enregistrement et de mixage pour tous les genres musicaux.</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>Coaching Artistique</h3>
+                    <p>Nos coaches artistiques vous accompagnent pour développer votre identité musicale, améliorer vos performances et vous guider dans votre carrière. Un accompagnement sur mesure pour atteindre vos objectifs.</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>Enregistrement en Studio</h3>
+                    <p>Profitez de nos studios de pointe pour enregistrer votre musique. Avec un équipement professionnel et un environnement créatif, nous vous aidons à obtenir un son exceptionnel pour vos projets.</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>Mixage et Mastering</h3>
+                    <p>Nos ingénieurs du son expérimentés proposent des services de mixage et de mastering pour sublimer vos morceaux. Un son de qualité supérieure, prêt à être diffusé sur toutes les plateformes.</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>Événements et Performances</h3>
+                    <p>Nous organisons des événements musicaux et performances live pour promouvoir nos artistes. Rejoignez notre communauté et participez à nos soirées exclusives et concerts inoubliables.</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>Distribution Digitale</h3>
+                    <p>Nous vous aidons à diffuser votre musique sur les plateformes digitales les plus populaires (Spotify, Apple Music, YouTube, etc.). Notre service de distribution vous permet d'atteindre un public mondial.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>À propos</h3>
+                <p>Naky's Music Group est un collectif dédié à la création musicale innovante. Basé sur la passion, nous cherchons à transformer chaque instant d'écoute en une expérience unique.</p>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:contact@nakysmusicgroup.com">contact@nakysmusicgroup.com</a></p>
+                <p>Téléphone: <a href="tel:+50943708949">+509 43 70 89 49</a></p>
+            </div>
+            <div class="footer-section social">
+                <h3>Suivez-nous</h3>
+                <a href="#"><img src="facebook-icon.png" alt="Facebook" width="30"></a>
+                <a href="#"><img src="tiktok-icon.png" alt="Tiktok" width="30"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram" width="30"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Naky's Music Group. Tous droits réservés.</p>
+        </div>
+    
+    </footer>
+</body>
+</html>

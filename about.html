@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Naky's Music Group</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function checkUser() {
+            if (!localStorage.getItem("user")) {
+                window.location.href = "login.html";
+            }
+        }
+    </script>
+     <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Se connecter</a></li>
+            <li><a href="signup.html">Inscrivez-vous</a></li>
+        </ul>
+        <!-- Barre de recherche -->
+        <div class="search-bar">
+            <input type="text" placeholder="Rechercher...">
+            <button type="submit">🔍</button>
+        </div>
+    </nav>
+</head>
+
+<body onload="checkUser()">
+    <!-- Barre de navigation -->
+
+
+    <!-- En-tête -->
+    <header class="welcome-section">
+        <h1>À propos de Naky's Music Group</h1>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+        <!-- Section À propos -->
+        <section class="about">
+            <h2>Qui sommes-nous ?</h2>
+            <p>
+                Naky's Music Group est bien plus qu'un simple collectif musical. Fondé par des artistes passionnés, nous explorons des univers sonores variés, repoussant les frontières des genres musicaux traditionnels. Notre mission est de créer une atmosphère musicale unique pour chaque auditeur. Nous croyons au pouvoir de la musique pour inspirer, rassembler et transformer.
+            </p>
+            <p>
+                Au fil des ans, nous avons collaboré avec des artistes de différents horizons, créant ainsi une communauté soudée et en pleine expansion. Grâce à notre approche innovante, nous avons su bâtir une réputation solide dans le domaine de la création musicale.
+            </p>
+        </section>
+
+        <!-- Section Équipe -->
+        <section class="team">
+            <h2>Notre Équipe</h2>
+            <p>Découvrez les membres talentueux qui donnent vie à Naky's Music Group :</p>
+            <ul>
+                <li><strong>Guerby RENE</strong> - Fondateur et Directeur Artistique</li>
+                <li><strong>Naky Xtapa</strong> - Producteur et Compositeur Principal</li>
+                <li><strong>Naseline SINCY</strong> - Responsable de la Communication et Relations Publiques</li>
+                <li><strong>Ralf Timmy</strong> - Directeur Technique et Ingénieur du Son</li>
+            </ul>
+        </section>
+
+        <!-- Section Vidéos -->
+        <section class="video-gallery">
+            <h2>Vidéo de Présentation</h2>
+            <p>Découvrez l'univers de Naky's Music Group à travers ces vidéos :</p>
+            <div class="video-container">
+                <video controls>
+                    <source src="Naky11.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la balise vidéo.
+                </video>
+                <video controls>
+                    <source src="Naky4 (2).mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la balise vidéo.
+                </video>
+                <video controls>
+                    <source src="Naky1.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la balise vidéo.
+                </video>
+                <video controls>
+                    <source src="Naky4 (1).mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la balise vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- Section Témoignages -->
+        <section class="testimonials">
+            <h2>Témoignages</h2>
+            <p>Voici ce que nos partenaires et fans disent de nous :</p>
+            <blockquote>
+                "Naky's Music Group apporte une véritable révolution dans le monde de la musique ! Chaque morceau est une aventure musicale en soi."
+                <cite>- DJ Master Sound</cite>
+            </blockquote>
+            <blockquote>
+                "Travailler avec Naky et son équipe a été une expérience incroyable. Leur créativité et leur professionnalisme sont incomparables."
+                <cite>- Sarah B., Chanteuse</cite>
+            </blockquote>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>À propos</h3>
+                <p>Naky's Music Group est un collectif dédié à la création musicale innovante. Basé sur la passion, nous cherchons à transformer chaque instant d'écoute en une expérience unique.</p>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:contact@nakysmusicgroup.com">contact@nakysmusicgroup.com</a></p>
+                <p>Téléphone: +509 43708949</p>
+                <p>Adresse: 12 Rue Lamarre, Mirebalais, Haiti</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Suivez-nous</h3>
+                <a href="#"><img src="facebook-icon.png" alt="Facebook" width="30"></a>
+                <a href="#"><img src="tiktok-icon.png" alt="Tiktok" width="30"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram" width="30"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Naky's Music Group. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
